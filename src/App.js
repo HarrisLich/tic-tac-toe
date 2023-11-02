@@ -48,36 +48,37 @@ function App() {
     console.log(table[0][0] + " " + table[1][1] + " " + table[2][2])
     //CHECK ROWS
     if((table[0][0] === 'X' && table[0][1] === 'X' && table[0][2] === 'X')) alert("X has won!")
-    if((table[0][0] === 'Y' && table[0][1] === 'Y' && table[0][2] === 'Y')) alert("Y has won!")
+    if((table[0][0] === 'O' && table[0][1] === 'O' && table[0][2] === 'O')) alert("O has won!")
 
     if((table[1][0] === 'X' && table[1][1] === 'X' && table[1][2] === 'X')) alert("X has won!")
-    if((table[1][0] === 'Y' && table[1][1] === 'Y' && table[1][2] === 'Y')) alert("Y has won!")
+    if((table[1][0] === 'O' && table[1][1] === 'O' && table[1][2] === 'O')) alert("O has won!")
 
     if((table[2][0] === 'X' && table[2][1] === 'X' && table[2][2] === 'X')) alert("X has won!")
-    if((table[2][0] === 'Y' && table[2][1] === 'Y' && table[2][2] === 'Y')) alert("Y has won!")
+    if((table[2][0] === 'O' && table[2][1] === 'O' && table[2][2] === 'O')) alert("O has won!")
 
     //CHECK COLS
     if((table[0][0] === 'X' && table[1][0] === 'X' && table[2][0] === 'X')) alert("X has won!")
-    if((table[0][0] === 'Y' && table[1][0] === 'Y' && table[2][0] === 'Y')) alert("Y has won!")
+    if((table[0][0] === 'O' && table[1][0] === 'O' && table[2][0] === 'O')) alert("O has won!")
 
     if((table[0][1] === 'X' && table[1][1] === 'X' && table[2][1] === 'X')) alert("X has won!")
-    if((table[0][1] === 'Y' && table[1][1] === 'Y' && table[2][1] === 'Y')) alert("Y has won!")
+    if((table[0][1] === 'O' && table[1][1] === 'O' && table[2][1] === 'O')) alert("O has won!")
 
     if((table[0][2] === 'X' && table[1][2] === 'X' && table[2][2] === 'X')) alert("X has won!")
-    if((table[0][2] === 'Y' && table[1][2] === 'Y' && table[2][2] === 'Y')) alert("Y has won!")
+    if((table[0][2] === 'O' && table[1][2] === 'O' && table[2][2] === 'O')) alert("O has won!")
 
     //CHECK DIAGNALS
     if((table[0][0] === 'X' && table[1][1] === 'X' && table[2][2] === 'X')) alert("X has won!")
-    if((table[0][0] === 'Y' && table[1][1] === 'Y' && table[2][2] === 'Y')) alert("Y has won!")
+    if((table[0][0] === 'O' && table[1][1] === 'O' && table[2][2] === 'O')) alert("O has won!")
 
     if((table[0][2] === 'X' && table[1][1] === 'X' && table[0][2] === 'X')) alert("X has won!")
-    if((table[0][2] === 'Y' && table[1][1] === 'Y' && table[0][2] === 'Y')) alert("Y has won!")
+    if((table[0][2] === 'O' && table[1][1] === 'O' && table[0][2] === 'O')) alert("O has won!")
 
 
   }
 
 
   const buttonClick = (col, row, buttonNum)=>{
+    if(table[col][row] != null) return
 
     //mark the button that was clicked
     table[col][row] = user;
